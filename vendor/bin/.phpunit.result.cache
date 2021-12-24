@@ -1,0 +1,1 @@
+{"version":1,"defects":{"StackTest::testAdd with data set #3":3},"times":{"StackTest::testPushAndPop":0.003,"StackTest::testEmpty":0.003,"StackTest::testPush":0.001,"StackTest::testPop":0,"StackTest::testAdd with data set #0":0.001,"StackTest::testAdd with data set #1":0,"StackTest::testAdd with data set #2":0,"StackTest::testAdd with data set #3":0}}
