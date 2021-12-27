@@ -1,3 +1,11 @@
+<?php
+
+// include('./../Classes/SendEmail.php');
+include $_SERVER['DOCUMENT_ROOT'] . '/Classes/SendEmail.php';
+$sendemail = new SendEmail();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +18,7 @@
     <h3>Howdy !</h3>
     <span>to : </span><span><?php echo $_POST["to"] ?></span><br>
     <span>content : </span><p><?php echo $_POST["content"] ?></p>
+    <span><?php $sendemail->toto(); ?></span>
 </body>
 </html>
+
