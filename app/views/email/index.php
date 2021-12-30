@@ -7,13 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Email :</h3>
-    <form action="/public/email/send" method="post">
-        <label for="">to : </label><input type="text" name="to">
-        <br>
-        <label for="">content : </label><textarea name="content"></textarea>
-        <br>
-        <input type="submit" value="send">
-    </form>
+    <?php include '../app/views/layout/header.php'?>
+    <section>
+        <h1>Email Page</h1>
+        <form action="/public/email/send" method="post">
+            <label for="">to : </label><input type="text" name="to">
+            <br>
+            <label for="">content : </label><textarea name="content"></textarea>
+            <br>
+            <input type="submit" value="send">
+        </form>
+    </section>    
 </body>
 </html>

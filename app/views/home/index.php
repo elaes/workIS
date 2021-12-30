@@ -7,9 +7,9 @@
     <title>Test Page</title>
 </head>
 <body>
-    <h3>Home</h3>
-    <a href="excel.php">Excel</a>
-    <span style="margin: 0 1rem;">|</span>
-    <a href="public/email">Mail</a>
+    <?php include '../app/views/layout/header.php'?>
+    <section>
+        <h1>Home Page</h1>
+    </section>
 </body>
 </html>

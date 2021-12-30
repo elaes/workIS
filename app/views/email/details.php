@@ -7,7 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h3><a href="/public">Home</a></h3>
+    <?php include '../app/views/layout/header.php'?>
+    <section>
+        <h1>Email Result Page</h1>
+        
+    </section>
     <span>to : </span><span><?= $data['to'] ?></span><br>
     <span>content : </span><span><?= $data['content'] ?></span/p>
 </body>
