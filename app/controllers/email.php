@@ -13,6 +13,7 @@ class Email extends Controller {
         $email = $this->model('EmailModel');
         $email->to = $_POST['to'];
         $email->content = $_POST['content'];
+        $email->send();
 
         $this->view('email/details', [
             'to' => $email->to, 

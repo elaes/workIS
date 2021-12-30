@@ -1,7 +1,6 @@
 {
     "require": {
         "phpoffice/phpspreadsheet" : "1.20.0",
-        "symfony/mailer": "^5.4",
         "phpmailer/phpmailer": "^6.5"
     },
     "require-dev": {

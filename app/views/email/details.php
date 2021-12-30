@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Howdy !</h3>
+    <h3><a href="/public">Home</a></h3>
     <span>to : </span><span><?= $data['to'] ?></span><br>
     <span>content : </span><span><?= $data['content'] ?></span/p>
 </body>
