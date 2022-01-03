@@ -28,6 +28,10 @@ $mail->AddReplyTo("lassana.traore2022@gmail.com", "Lassana TRAORE");
 // $mail->AddCC("lassana.traore2022@gmail.com", "cc-recipient-name");
 $mail->Subject = "Test is Test Email sent via Gmail SMTP Server using PHP Mailer";
 
+ob_start();
+include '../app/views/email/content.php';
+$this->content = ob_get_clean();
+
 $mail->MsgHTML($content); 
 if(!$mail->Send()) {
   echo "Error while sending Email.";

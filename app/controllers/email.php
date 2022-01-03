@@ -2,10 +2,10 @@
 
 class Email extends Controller {
 
-    private $email;
+    public $email = "";
 
     function __construct(){
-        $this->$email = $this->model('EmailModel');
+        
     }
 
     public function index($name = ''){
@@ -13,13 +13,13 @@ class Email extends Controller {
     }
 
     public function preview(){
-        $this->$email = $this->model('EmailModel');
-        $this->$email->to = $_POST['to'];
-        $this->$email->content = $_POST['content'];
-        $this->$email->preview();
+        $this->email = $this->model('EmailModel');
+        $this->email->to = $_POST['to'];
+        $this->email->poste = $_POST['poste'];
+        $this->email->preview();
         $this->view('email/preview', [
-            'to' => $email->to, 
-            'content' => $email->content
+            'to' => $this->email->to, 
+            'message' => $this->email->message
         ]);
     }
 
@@ -27,7 +27,7 @@ class Email extends Controller {
         $email->send();
         $this->view('email/details', [
             'to' => $email->to, 
-            'content' => $email->content
+            'message' => $email->message
         ]);
     }
 

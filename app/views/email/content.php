@@ -9,7 +9,7 @@
                            background-color: white;">
                     <h4 style="text-align: left;
                                align-items: center;">
-                        Candidature au poste de : <?= $this->content ?>
+                        Candidature au poste de : <?= $this->poste ?>
                    </h4>
                     <p class="data"
                        style="text-align: justify-all;
@@ -22,9 +22,7 @@
                               align-items: center; 
                               font-size: 15px;
                               padding-bottom: 12px;">
-                        Voici ma candidature, Lorem ipsum dolor sit amet consectetur, 
-                        adipisicing elit. Magnam mollitia iste excepturi saepe expedita 
-                        natus vitae voluptatem delectus! Ipsa, accusantium?
+                        <?= $this->message ?>
                     </p>
                     <p style="text-align: justify-all;
                     align-items: center; 

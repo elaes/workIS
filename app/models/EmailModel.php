@@ -3,12 +3,11 @@
 
 class EmailModel {
     public $to;
-    public $content;
+    public $poste;
+    public $message;
 
-    public function preview(){
-        ob_start();
-        include '../app/views/email/content.php';
-        $content = ob_get_clean();
+    public function preview(){     
+        $this->message = "Candidature au poste de " . $this->poste;
     }
 
     public function send(){
