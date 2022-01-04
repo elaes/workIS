@@ -8,8 +8,8 @@ class Email extends Controller {
         
     }
 
-    public function index($name = ''){
-        $this->view('email/index', ['name' => $user->name]);
+    public function index(){
+        $this->view('email/index');
     }
 
     public function preview(){
@@ -17,9 +17,11 @@ class Email extends Controller {
         $this->email->to = $_POST['to'];
         $this->email->poste = $_POST['poste'];
         $this->email->preview();
+        $tel = $_ENV['TEL'];
         $this->view('email/preview', [
             'to' => $this->email->to, 
-            'message' => $this->email->message
+            'message' => $this->email->message, 
+            'tel' => $tel
         ]);
     }
 

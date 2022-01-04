@@ -7,7 +7,7 @@
     <title>Test Page</title>
 </head>
 <body>
-    <?php include '../app/views/layout/header.php'?>
+    <?php include 'app/views/layout/header.php'?>
     <section>
         <h1>Home Page</h1>
     </section>

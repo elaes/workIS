@@ -2,6 +2,7 @@
 
 
 class EmailModel {
+    
     public $to;
     public $poste;
     public $message;

@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include '../app/views/layout/header.php'?>
+    <?php include 'app/views/layout/header.php'?>
     <section>
         <h1>Email Page</h1>
-        <form action="/public/email/preview" method="post">
+        <form action="/email/preview" method="post">
             <label for="">to : </label><input type="text" name="to">
             <br>
             <label for="">poste : </label><textarea name="poste"></textarea>

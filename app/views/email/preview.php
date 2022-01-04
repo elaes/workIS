@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include '../app/views/layout/header.php'?>
+    <?php include 'app/views/layout/header.php'?>
     <section>
         <h1>Email Result Page</h1>
         
     </section>
     <span>to : </span><span><?= $data['to'] ?></span><br>
     <span>content : </span><span><?= $data['message'] ?></span>
+    <span>Tel : </span><span><?= $data['tel'] ?></span>
 </body>
 </html>
 

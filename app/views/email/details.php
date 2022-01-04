@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include '../app/views/layout/header.php'?>
+    <?php include 'app/views/layout/header.php'?>
     <section>
         <h1>Email Result Page</h1>
         
