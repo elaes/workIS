@@ -1,5 +1,7 @@
 <?php
 
+namespace Example\Project\Controllers;
+
 class Email extends Controller {
 
     public $email = "";

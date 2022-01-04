@@ -16,7 +16,8 @@ class App {
         }
         
         require_once 'app/controllers/' . $this->controller . '.php';
-        $this->controller = new $this->controller;
+        $path = '\\Example\\Project\\Controllers\\' . $this->controller;
+        $this->controller = new $path;
 
         if( isset($url[2]) ){
             if( method_exists($this->controller, $url[2]) ){
@@ -27,10 +28,6 @@ class App {
 
         $this->params = $url ? array_values($url) : [];
         call_user_func_array([$this->controller, $this->method], $this->params);
-
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-        $dotenv->load();
-        print_r($_ENV);
     }
 
     public function parseUrl(){
