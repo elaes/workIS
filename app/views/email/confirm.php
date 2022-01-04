@@ -13,7 +13,7 @@
         
     </section>
     <span>to : </span><span><?= $data['to'] ?></span><br>
-    <span>content : </span><span><?= $data['content'] ?></span/p>
+    <span>result : </span><span><?= $data['result'] ?></span/p>
 </body>
 </html>
 

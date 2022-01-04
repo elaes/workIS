@@ -15,6 +15,8 @@
     <span>to : </span><span><?= $data['to'] ?></span><br>
     <span>content : </span><span><?= $data['message'] ?></span>
     <span>Tel : </span><span><?= $data['tel'] ?></span>
+
+    <a href="/email/send">Send</a>
 </body>
 </html>
 

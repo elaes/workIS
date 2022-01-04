@@ -18,8 +18,8 @@ $mail->SMTPAuth   = TRUE;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
 $mail->Host       = "smtp.gmail.com";
-$mail->Username   = "lassana.traore2022@gmail.com";
-$mail->Password   = "mwxjshszstfcvbod";
+$mail->Username   = $_ENV['EMAIL_USER'];
+$mail->Password   = $_ENV['EMAIL_PASS'];
 
 $mail->IsHTML(true);
 $mail->AddAddress($this->to, $this->to);
@@ -34,8 +34,8 @@ $this->content = ob_get_clean();
 
 $mail->MsgHTML($content); 
 if(!$mail->Send()) {
-  echo "Error while sending Email.";
-  var_dump($mail);
+  $this->result = "Error while sending Email.";
+  // var_dump($mail);
 } else {
-  echo "Email sent successfully";
+  $this->result = "Email sent successfully";
 }

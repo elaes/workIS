@@ -6,8 +6,8 @@ class Email extends Controller {
 
     public $email = "";
 
-    function __construct(){
-        
+    function __construct(){        
+        $this->email = $this->model('EmailModel');
     }
 
     public function index(){
@@ -15,11 +15,11 @@ class Email extends Controller {
     }
 
     public function preview(){
-        $this->email = $this->model('EmailModel');
         $this->email->to = $_POST['to'];
-        $this->email->poste = $_POST['poste'];
+        $this->email->set_poste($_POST['poste']);
         $this->email->preview();
         $tel = $_ENV['TEL'];
+        var_dump($this->email);
         $this->view('email/preview', [
             'to' => $this->email->to, 
             'message' => $this->email->message, 
@@ -28,10 +28,12 @@ class Email extends Controller {
     }
 
     public function send(){
-        $email->send();
-        $this->view('email/details', [
-            'to' => $email->to, 
-            'message' => $email->message
+        var_dump($this->email);
+        // $email->send();
+        $this->view('email/confirm', [
+            'to' => $this->email->to, 
+            'message' => $this->email->message,
+            'result' => $this->email->get_poste()
         ]);
     }
 
