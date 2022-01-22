@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Read file
 on: [push]
 jobs:
   example-job:
