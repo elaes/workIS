@@ -1,0 +1,8 @@
+name: CI
+on: [push]
+jobs:
+  print_from_context:
+    runs-on: ubuntu-latest
+    name: Display context
+    steps:
+      - run: echo ${{ github.ref }}
