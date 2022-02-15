@@ -5,7 +5,7 @@ work information system
 gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram to mermaid
-excludes weekdays 2014-01-10
+excludes weekdays 2021-02-10
 
 section A section
 Completed task            :done,    des1, 2014-01-06,2014-01-08
